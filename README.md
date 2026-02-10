@@ -1,3 +1,10 @@
+<!--
+Unless explicitly stated otherwise all files in this repository are licensed
+under the Apache License Version 2.0.
+This product includes software developed at Datadog (https://www.datadoghq.com/).
+Copyright 2026-present Datadog, Inc.
+-->
+
 # Datadog Pack
 
 A Homebrew tap for managing Datadog-provided package updates. This tap allows you to install and update Homebrew packages through tools provided by Datadog.
