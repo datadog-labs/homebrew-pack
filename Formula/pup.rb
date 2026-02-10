@@ -1,0 +1,19 @@
+class Pup < Formula
+  desc "Go-based command-line wrapper for easy interaction with Datadog APIs"
+  homepage "https://github.com/DataDog/pup"
+  url "https://github.com/DataDog/pup/archive/refs/tags/0.7.0.tar.gz"
+  sha256 "768d34ad676637963341c321e3ee9f1dd3d15302af1449507efe6d53f7722d2e"
+  license "Apache-2.0"
+  head "https://github.com/DataDog/pup.git", branch: "main"
+
+  depends_on "go" => :build
+
+  def install
+    system "go", "build", *std_go_args(ldflags: "-s -w")
+  end
+
+  test do
+    # Test that the binary executes and shows help
+    assert_match "pup is a CLI wrapper for Datadog APIs", shell_output("#{bin}/pup --help")
+  end
+end
