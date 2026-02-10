@@ -1,18 +1,48 @@
-# DataDog Pack
+# Datadog Pack
 
-## How do I install these formulae?
+A Homebrew tap for managing Datadog-provided package updates. This tap allows you to install and update Homebrew packages through tools provided by Datadog.
 
-`brew install datadog/pack/<formula>`
+## What is this?
 
-Or `brew tap datadog/pack` and then `brew install <formula>`.
+This tap provides access to Datadog's custom Homebrew formulae, enabling you to easily install and manage Datadog tools and utilities on macOS and Linux systems via Homebrew.
 
-Or, in a `brew bundle` `Brewfile`:
+## Installation
+
+### Install a specific formula
+
+```bash
+brew install datadog/pack/<formula>
+```
+
+### Tap first, then install
+
+```bash
+brew tap datadog/pack
+brew install <formula>
+```
+
+### Using Brewfile
+
+Add to your `Brewfile`:
 
 ```ruby
 tap "datadog/pack"
 brew "<formula>"
 ```
 
+## Usage
+
+After tapping this repository, you can install, upgrade, and manage packages just like any other Homebrew formula:
+
+```bash
+brew install datadog/pack/<formula>
+brew upgrade <formula>
+brew uninstall <formula>
+```
+
 ## Documentation
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+For more information on Homebrew usage:
+- `brew help`
+- `man brew`
+- [Homebrew's documentation](https://docs.brew.sh)
