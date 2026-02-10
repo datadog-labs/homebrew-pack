@@ -1,3 +1,10 @@
+<!--
+Unless explicitly stated otherwise all files in this repository are licensed
+under the Apache License Version 2.0.
+This product includes software developed at Datadog (https://www.datadoghq.com/).
+Copyright 2026 Datadog, Inc.
+-->
+
 # Agent Guidelines for Datadog Pack
 
 This document describes the Datadog Pack Homebrew tap project and establishes development practices for contributors and automated agents.
