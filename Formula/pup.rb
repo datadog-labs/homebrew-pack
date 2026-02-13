@@ -6,8 +6,8 @@
 class Pup < Formula
   desc "Go-based command-line wrapper for easy interaction with Datadog APIs"
   homepage "https://github.com/DataDog/pup"
-  url "https://github.com/DataDog/pup/archive/refs/tags/0.7.0.tar.gz"
-  sha256 "768d34ad676637963341c321e3ee9f1dd3d15302af1449507efe6d53f7722d2e"
+  url "https://github.com/DataDog/pup/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "0957cead836d923311ad2bbc6aa90045abb2265b5bc0fb85710ac2fa94515ba8"
   license "Apache-2.0"
   head "https://github.com/DataDog/pup.git", branch: "main"
 
