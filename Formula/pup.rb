@@ -6,19 +6,34 @@
 class Pup < Formula
   desc "Go-based command-line wrapper for easy interaction with Datadog APIs"
   homepage "https://github.com/DataDog/pup"
-  url "https://github.com/DataDog/pup/archive/refs/tags/v0.10.0.tar.gz"
-  sha256 "0957cead836d923311ad2bbc6aa90045abb2265b5bc0fb85710ac2fa94515ba8"
+  version "0.15.0"
   license "Apache-2.0"
-  head "https://github.com/DataDog/pup.git", branch: "main"
 
-  depends_on "go" => :build
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/DataDog/pup/releases/download/v0.15.0/pup_0.15.0_Darwin_arm64.tar.gz"
+      sha256 "f631f05504d3cc9a7689271403ba5a0800044ed890fbe90da2f116e4b95f6d85"
+    else
+      url "https://github.com/DataDog/pup/releases/download/v0.15.0/pup_0.15.0_Darwin_x86_64.tar.gz"
+      sha256 "8429e98dce38b9d739fc99c6dd1115081bf5f0e089a518585b3bb412790bd77c"
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm?
+      url "https://github.com/DataDog/pup/releases/download/v0.15.0/pup_0.15.0_Linux_arm64.tar.gz"
+      sha256 "0bc6e82722cc50653585b6d31b3f96312f43819d3bddce6f878f78c6df8b80f1"
+    else
+      url "https://github.com/DataDog/pup/releases/download/v0.15.0/pup_0.15.0_Linux_x86_64.tar.gz"
+      sha256 "f21742b7bb6f92d43b7f16797edfd4c51df514d8c27772d035ec989fffab3b7a"
+    end
+  end
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    bin.install "pup"
   end
 
   test do
-    # Test that the binary executes and shows help
-    assert_match "pup is a CLI wrapper for Datadog APIs", shell_output("#{bin}/pup --help")
+    assert_match "Datadog APIs", shell_output("#{bin}/pup --help")
   end
 end
