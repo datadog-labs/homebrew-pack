@@ -18,13 +18,13 @@ This tap provides access to Datadog's custom Homebrew formulae, enabling you to 
 ### Install a specific formula
 
 ```bash
-brew install datadog/pack/<formula>
+brew install datadog-labs/pack/<formula>
 ```
 
 ### Tap first, then install
 
 ```bash
-brew tap datadog/pack
+brew tap datadog-labs/pack
 brew install <formula>
 ```
 
@@ -33,7 +33,7 @@ brew install <formula>
 Add to your `Brewfile`:
 
 ```ruby
-tap "datadog/pack"
+tap "datadog-labs/pack"
 brew "<formula>"
 ```
 
@@ -42,7 +42,7 @@ brew "<formula>"
 After tapping this repository, you can install, upgrade, and manage packages just like any other Homebrew formula:
 
 ```bash
-brew install datadog/pack/<formula>
+brew install datadog-labs/pack/<formula>
 brew upgrade <formula>
 brew uninstall <formula>
 ```
