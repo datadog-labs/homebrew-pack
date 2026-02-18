@@ -23,7 +23,7 @@ This repository provides Homebrew formulae for Datadog-maintained tools. Before 
 
 If you encounter a problem with a formula:
 
-1. Check if the issue already exists in [GitHub Issues](https://github.com/DataDog/homebrew-pack/issues)
+1. Check if the issue already exists in [GitHub Issues](https://github.com/datadog-labs/homebrew-pack/issues)
 2. If not, create a new issue with:
    - Clear description of the problem
    - Steps to reproduce
