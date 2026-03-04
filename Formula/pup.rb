@@ -6,26 +6,26 @@
 class Pup < Formula
   desc "Go-based command-line wrapper for easy interaction with Datadog APIs"
   homepage "https://github.com/datadog-labs/pup"
-  version "0.25.0"
+  version "0.26.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/datadog-labs/pup/releases/download/v0.25.0/pup_0.25.0_Darwin_arm64.tar.gz"
-      sha256 "248484699185ff3fbabcdd9f1411134aeb605eef3b8700f2c8010d76ca276b1e"
+      url "https://github.com/datadog-labs/pup/releases/download/v0.26.0/pup_0.26.0_Darwin_arm64.tar.gz"
+      sha256 "a6fde8627819820e15e217f6cced7107b99e00228074daccd005f12d6e16f507"
     else
-      url "https://github.com/datadog-labs/pup/releases/download/v0.25.0/pup_0.25.0_Darwin_x86_64.tar.gz"
-      sha256 "cc0782cd0fa656353c5d1e858a4c7bb2453e94216e7dcff170fc3c5f517b71c2"
+      url "https://github.com/datadog-labs/pup/releases/download/v0.26.0/pup_0.26.0_Darwin_x86_64.tar.gz"
+      sha256 "a8ece63a08f2e7178b803163177cab4e0861954b24e020393459f817185bc4d3"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/datadog-labs/pup/releases/download/v0.25.0/pup_0.25.0_Linux_arm64.tar.gz"
-      sha256 "77f79954f7e3597de59f365d74f4ec12c69113562148c0bcdbd910c1a3c93d55"
+      url "https://github.com/datadog-labs/pup/releases/download/v0.26.0/pup_0.26.0_Linux_arm64.tar.gz"
+      sha256 "6f1424170e8e28bca82cf40eceb0189cf050b507bd4796f1d7194a9bb4affdc9"
     else
-      url "https://github.com/datadog-labs/pup/releases/download/v0.25.0/pup_0.25.0_Linux_x86_64.tar.gz"
-      sha256 "24f966bc2de2140b073908ab4b583ad48efb3aca90ca710754ff3eaa75b5568b"
+      url "https://github.com/datadog-labs/pup/releases/download/v0.26.0/pup_0.26.0_Linux_x86_64.tar.gz"
+      sha256 "a25af40643591a4b3d9dbb02fe66e2b63a12af1ff278d5b67b89360f969eab7f"
     end
   end
 
