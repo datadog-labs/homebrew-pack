@@ -2,3 +2,5 @@
 # These owners will be automatically requested for review when PRs are opened
 
 * @platinummonkey
+
+Formula/datadog-code-security-mcp.rb @datadog-labs/k9-code-security
