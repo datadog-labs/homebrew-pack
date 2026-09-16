@@ -33,9 +33,21 @@ class Pup < Formula
 
   def install
     bin.install "pup"
+
+    # `pup completions <shell>` prints a completion script generated from the
+    # binary's own command tree, so the installed completions match the shipped
+    # CLI exactly and are refreshed on every upgrade. Installed for the shells
+    # Homebrew supports by default (bash, zsh, fish); `pup completions
+    # <shell> --install` remains available for elvish/powershell and for an
+    # auto-refreshing loader outside the keg.
+    generate_completions_from_executable(bin/"pup", "completions")
   end
 
   test do
     assert_match "Datadog API CLI", shell_output("#{bin}/pup --help")
+
+    assert_path_exists bash_completion/"pup"
+    assert_path_exists zsh_completion/"_pup"
+    assert_path_exists fish_completion/"pup.fish"
   end
 end
