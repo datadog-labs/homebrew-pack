@@ -8,27 +8,29 @@
 class Bits < Formula
   desc "Datadog Assistant in your terminal"
   homepage "https://github.com/datadog-labs/bits-cli"
+  # Shipped bits binaries read this line to offer updates; keep exactly one.
+  version "0.0.8"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.7/bits_0.0.7_darwin_arm64.tar.gz"
-      sha256 "3753d2103c0974ef7040bdd5864cc3a844067c1e323606fe3e7d6cf9f57860db"
+      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.8/bits_0.0.8_darwin_arm64.tar.gz"
+      sha256 "fd1f34b619f2feb2606ba4554eddd4d4eb9aa846549b07d316eca4202988cd4d"
     end
     on_intel do
-      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.7/bits_0.0.7_darwin_amd64.tar.gz"
-      sha256 "1d34400b30d6b49fca331d9fbb33a2f07b16f5cae09dc6f329ef6e1d20a8afcf"
+      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.8/bits_0.0.8_darwin_amd64.tar.gz"
+      sha256 "4114a54b2d2859db1b466c1f5792aab7a244320f326fed7c19e0dee0c3295a7c"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.7/bits_0.0.7_linux_arm64.tar.gz"
-      sha256 "8ea62b433f5dbde1f962c40b5aec327bdc84587c24abe59e523310ed1898a6a9"
+      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.8/bits_0.0.8_linux_arm64.tar.gz"
+      sha256 "7a5326e04c9e093a2d6d6a9b1acbb16ca8765fa1862fed983a3610d5b55b063f"
     end
     on_intel do
-      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.7/bits_0.0.7_linux_amd64.tar.gz"
-      sha256 "3f49d5391548348f20b33d6d9e9019da1400c98946b38d59564293f76b9546cb"
+      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.8/bits_0.0.8_linux_amd64.tar.gz"
+      sha256 "e4079b8f9c32a3768a4c919404e5b1c20c20ed6523e0f3cfa14b18da1857b0f6"
     end
   end
 
