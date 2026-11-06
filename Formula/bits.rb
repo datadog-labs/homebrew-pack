@@ -12,31 +12,32 @@ class Bits < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.11/bits_0.0.11_darwin_arm64.tar.gz"
-      sha256 "d31bf704051dbc433e32611110f3d6393e8f59af561c67838245046a4644485d"
+      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.12/bits_0.0.12_darwin_arm64.tar.gz"
+      sha256 "b5ead9a513c47f2afc571e23c8c2dcb66dda855e3640fde92aebc0b2fc063dc1"
     end
     on_intel do
-      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.11/bits_0.0.11_darwin_amd64.tar.gz"
-      sha256 "e3fabbb20e61b96260125512bbd7ab60bdb9a0700bf65ef11bc6a15fec85f953"
+      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.12/bits_0.0.12_darwin_amd64.tar.gz"
+      sha256 "9fe0e2ea919b2e0184324390e1d3c27503390893a34b7263a7df1c87f74ed499"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.11/bits_0.0.11_linux_arm64.tar.gz"
-      sha256 "8a28f1f87387abbe03bfadc913d717788bf872744c727f68ec7f111e84bd2ce5"
+      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.12/bits_0.0.12_linux_arm64.tar.gz"
+      sha256 "83274848b6bbdbc6d5d666b0a3350722947faf96fb6131f7f751996ca135f1f8"
     end
     on_intel do
-      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.11/bits_0.0.11_linux_amd64.tar.gz"
-      sha256 "d94ca462161afaa327ec668285afbb202c3679925d23f04c3ffdf7e813bdf5ac"
+      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.12/bits_0.0.12_linux_amd64.tar.gz"
+      sha256 "2c009130818e7534efa69a17c0f648cd79d18a58c91558a6c40352e29eedba52"
     end
   end
 
   def install
-    bin.install "bits"
+    prefix.install Dir["*"]
   end
 
   test do
     assert_equal "bits version v#{version}", shell_output("#{bin}/bits --version").strip
+    assert_predicate libexec/"bits/ddviz/ddviz", :executable? if OS.mac?
   end
 end
