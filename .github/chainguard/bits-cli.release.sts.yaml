@@ -1,0 +1,14 @@
+# Policy for: the homebrew job of .github/workflows/release.yml in datadog-labs/bits-cli
+# Lets the bits-cli release workflow push the update/bits-<version> branch of a
+# signed Formula/bits.rb commit and open the corresponding pull request.
+issuer: https://token.actions.githubusercontent.com
+subject: repo:datadog-labs@259158689/bits-cli@1405976060:ref:refs/heads/main
+
+claim_pattern:
+  event_name: workflow_dispatch
+  ref: refs/heads/main
+  job_workflow_ref: datadog-labs/bits-cli/\.github/workflows/release\.yml@refs/heads/main
+
+permissions:
+  contents: write
+  pull_requests: write
