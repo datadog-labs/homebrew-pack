@@ -1,16 +1,16 @@
-# Policy for: the homebrew job of .github/workflows/release.yml in datadog-labs/pup
+# Policy for: the homebrew job of .github/workflows/release.yml in DataDog/pup
 # Lets the pup release workflow dispatch this tap's update-pup-formula.yml,
 # which opens the update/pup-<version> pull request with signed commits.
 # release.yml runs on v*.*.* tag pushes and on workflow_dispatch against the
 # tag (it reads the version from GITHUB_REF_NAME), so both events are allowed
 # only from release tags.
 issuer: https://token.actions.githubusercontent.com
-subject_pattern: repo:datadog-labs/pup:ref:refs/tags/v[0-9]+\.[0-9]+\.[0-9]+
+subject_pattern: repo:DataDog/pup:ref:refs/tags/v[0-9]+\.[0-9]+\.[0-9]+
 
 claim_pattern:
   event_name: (push|workflow_dispatch)
   ref: refs/tags/v[0-9]+\.[0-9]+\.[0-9]+
-  job_workflow_ref: datadog-labs/pup/\.github/workflows/release\.yml@refs/tags/v[0-9]+\.[0-9]+\.[0-9]+
+  job_workflow_ref: DataDog/pup/\.github/workflows/release\.yml@refs/tags/v[0-9]+\.[0-9]+\.[0-9]+
 
 permissions:
   actions: write
