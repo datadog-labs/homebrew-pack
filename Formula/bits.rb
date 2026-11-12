@@ -12,23 +12,23 @@ class Bits < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.12/bits_0.0.12_darwin_arm64.tar.gz"
-      sha256 "b5ead9a513c47f2afc571e23c8c2dcb66dda855e3640fde92aebc0b2fc063dc1"
+      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.13/bits_0.0.13_darwin_arm64.tar.gz"
+      sha256 "ba72d9014176f95dd7bcbd38d9211e3196635c3b59c619bd286bff10d58f5262"
     end
     on_intel do
-      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.12/bits_0.0.12_darwin_amd64.tar.gz"
-      sha256 "9fe0e2ea919b2e0184324390e1d3c27503390893a34b7263a7df1c87f74ed499"
+      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.13/bits_0.0.13_darwin_amd64.tar.gz"
+      sha256 "46e2b0211501283747e0aaefea127a8ea95e2b82879088343924786054c4d103"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.12/bits_0.0.12_linux_arm64.tar.gz"
-      sha256 "83274848b6bbdbc6d5d666b0a3350722947faf96fb6131f7f751996ca135f1f8"
+      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.13/bits_0.0.13_linux_arm64.tar.gz"
+      sha256 "e7496076c46098e8378f327400ff9986853893690108319ef7e1196dc6537e4c"
     end
     on_intel do
-      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.12/bits_0.0.12_linux_amd64.tar.gz"
-      sha256 "2c009130818e7534efa69a17c0f648cd79d18a58c91558a6c40352e29eedba52"
+      url "https://github.com/datadog-labs/bits-cli/releases/download/v0.0.13/bits_0.0.13_linux_amd64.tar.gz"
+      sha256 "08282b304eacc349610b31b4740e785ee59585e619c46c08ae31f4c1d75a25f9"
     end
   end
 
