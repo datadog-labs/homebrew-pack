@@ -5,21 +5,21 @@ class DatadogCodeSecurityMcp < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/datadog-labs/datadog-code-security-mcp/releases/download/v0.5.0/datadog-code-security-mcp-darwin-arm64.tar.gz"
-      sha256 "b23deff337ff4deb1def19e78ad3b41976799437d1d49143289ecaa2fd9fe40c"
+      url "https://github.com/datadog-labs/datadog-code-security-mcp/releases/download/v0.6.0/datadog-code-security-mcp-darwin-arm64.tar.gz"
+      sha256 "4b1e4c7190936c34b401abc5e50ec25092e8b84ac0608c2fa9b440f6d83aca12"
     else
-      url "https://github.com/datadog-labs/datadog-code-security-mcp/releases/download/v0.5.0/datadog-code-security-mcp-darwin-amd64.tar.gz"
-      sha256 "75defef01b585706d92677e05b079d2d8bedcc7f55add2f567ba759149539c2a"
+      url "https://github.com/datadog-labs/datadog-code-security-mcp/releases/download/v0.6.0/datadog-code-security-mcp-darwin-amd64.tar.gz"
+      sha256 "b434587c9bccc7a0727d91479a9671ef9a3a26a33c667bc24a0c1c32c3b5313c"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/datadog-labs/datadog-code-security-mcp/releases/download/v0.5.0/datadog-code-security-mcp-linux-arm64.tar.gz"
-      sha256 "ebb8e405abb0206abb834a13923a269832f569a2a4b9909fbe5dffe6a271772f"
+      url "https://github.com/datadog-labs/datadog-code-security-mcp/releases/download/v0.6.0/datadog-code-security-mcp-linux-arm64.tar.gz"
+      sha256 "d5064892ad9c62c5be80a3ae72512923a0abe2511169c300cfb389fc5c989b8c"
     else
-      url "https://github.com/datadog-labs/datadog-code-security-mcp/releases/download/v0.5.0/datadog-code-security-mcp-linux-amd64.tar.gz"
-      sha256 "37c8b38183dbbaa2e6a914d339574908882d8f747d67a33aa3723ec35c40d89a"
+      url "https://github.com/datadog-labs/datadog-code-security-mcp/releases/download/v0.6.0/datadog-code-security-mcp-linux-amd64.tar.gz"
+      sha256 "d1d2ba7b497b82cd4012063cc5d714cfd5d45637792e329d2bbea55a21f5a8f0"
     end
   end
 
