@@ -36,6 +36,17 @@ jobs:
           key: ${{ matrix.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ matrix.os }}-rubygems-
 
+      # Homebrew now requires `$(brew --prefix)/libexec` to exist and be writable.
+      # On Intel macOS runners the prefix is /usr/local, which the runner user
+      # cannot write to, so `brew test-bot` fails to create it on its own.
+      - name: Ensure Homebrew libexec directory exists
+        run: |
+          libexec="$(brew --prefix)/libexec"
+          if ! mkdir -p "$libexec" 2>/dev/null; then
+            sudo mkdir -p "$libexec"
+            sudo chown "$(id -un)" "$libexec"
+          fi
+
       - run: brew test-bot --only-cleanup-before
 
       - run: brew test-bot --only-setup
